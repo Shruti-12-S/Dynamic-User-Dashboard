@@ -6,6 +6,7 @@ https://dynamic-user-dashboard-kappa.vercel.app/
 
 
 ## 📌 Features
+
 ✅ Real-Time Profile Preview
 ✅ Advanced Form Validation
 ✅ Password Strength Indicator
