@@ -1,0 +1,457 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:#f8fafc;
+
+    min-height:100vh;
+    overflow-y:auto;
+
+    padding:20px;
+
+    transition:0.4s ease;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+
+    /* Small spacing from top */
+    padding-top:20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+h1{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:6px;
+    letter-spacing:1px;
+
+    background:linear-gradient(to right,#38bdf8,#0ea5e9);
+
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    font-size:14px;
+
+    /* Reduced spacing */
+    margin-bottom:12px;
+
+    letter-spacing:0.5px;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:start;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card{
+    position:relative;
+
+    background:rgba(30,41,59,0.72);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:18px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+
+    transition:0.3s ease;
+
+    /* Better desktop fit */
+    min-height:68vh;
+
+    /* Scroll if content increases */
+    overflow-y:auto;
+}
+
+/* Custom Scrollbar */
+
+.card::-webkit-scrollbar{
+    width:6px;
+}
+
+.card::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(to right,#38bdf8,#0ea5e9);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(14,165,233,0.22),
+        0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card h2{
+    margin-bottom:16px;
+    font-size:20px;
+    font-weight:600;
+    color:#38bdf8;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+.input-group{
+    margin-bottom:14px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-size:13px;
+    font-weight:500;
+    color:#cbd5e1;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+
+    padding:10px 12px;
+
+    border-radius:12px;
+
+    border:1px solid transparent;
+
+    background:#334155;
+
+    color:white;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#38bdf8;
+
+    box-shadow:0 0 0 3px rgba(56,189,248,0.15);
+}
+
+textarea{
+    resize:none;
+    min-height:75px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+    width:100%;
+
+    padding:11px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(to right,#0ea5e9,#0284c7);
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+
+    letter-spacing:0.4px;
+}
+
+button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(14,165,233,0.3);
+}
+
+button:active{
+    transform:scale(0.98);
+}
+
+/* =========================
+   VALIDATION MESSAGES
+========================= */
+
+.error{
+    color:#f87171;
+    font-size:12px;
+    margin-top:5px;
+    font-weight:500;
+}
+
+.success{
+    color:#4ade80;
+    font-size:13px;
+    margin-top:10px;
+    font-weight:500;
+}
+
+/* =========================
+   PROFILE PREVIEW
+========================= */
+
+.profile-preview{
+    margin-top:18px;
+
+    padding:16px;
+
+    background:rgba(51,65,85,0.85);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:16px;
+
+    display:none;
+
+    animation:fadeIn 0.5s ease;
+}
+
+.profile-preview h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+    font-size:16px;
+}
+
+.profile-preview p{
+    margin:6px 0;
+    color:#e2e8f0;
+    line-height:1.5;
+    font-size:14px;
+}
+
+/* =========================
+   PASSWORD STRENGTH
+========================= */
+
+.strength{
+    width:100%;
+    height:8px;
+    margin-top:10px;
+    border-radius:20px;
+    background:#475569;
+    overflow:hidden;
+}
+
+.strength-bar{
+    height:100%;
+    width:0%;
+    border-radius:20px;
+    transition:0.4s ease;
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle{
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    z-index:1000;
+}
+
+.theme-toggle button{
+    width:auto;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-size:13px;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light{
+    background:linear-gradient(135deg,#f8fafc,#e2e8f0);
+    color:#0f172a;
+}
+
+.light .card{
+    background:rgba(255,255,255,0.92);
+
+    border:1px solid rgba(15,23,42,0.08);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
+
+.light input,
+.light textarea,
+.light select{
+    background:#e2e8f0;
+
+    color:#111827;
+
+    border:1px solid #cbd5e1;
+}
+
+.light label{
+    color:#334155;
+}
+
+.light .profile-preview{
+
+    /* Better grey shade */
+    background:#dbe4ee;
+
+    border:1px solid #cbd5e1;
+}
+
+.light .profile-preview p{
+    color:#1e293b;
+}
+
+.light .subtitle{
+    color:#475569;
+}
+
+.light .strength{
+    background:#cbd5e1;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:auto;
+    }
+
+    .theme-toggle{
+        position:static;
+        margin-bottom:15px;
+        display:flex;
+        justify-content:flex-end;
+    }
+}
+
+@media(max-width:500px){
+
+    body{
+        padding:16px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:13px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    button{
+        font-size:13px;
+    }
+}
