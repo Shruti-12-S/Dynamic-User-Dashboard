@@ -116,4 +116,5 @@ The dashboard is fully responsive and works smoothly on:
 ## 👨‍💻 Author
 
 **Shruti**
+
 If you like this project, give it a ⭐ on GitHub!
