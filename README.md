@@ -7,13 +7,13 @@ https://dynamic-user-dashboard-kappa.vercel.app/
 
 ## 📌 Features
 
-✅ Real-Time Profile Preview
-✅ Advanced Form Validation
-✅ Password Strength Indicator
-✅ Dark / Light Theme Toggle
-✅ Responsive UI Design
-✅ Local Storage Integration
-✅ Modern Glassmorphism Design
+✅ Real-Time Profile Preview<br>
+✅ Advanced Form Validation<br>
+✅ Password Strength Indicator<br>
+✅ Dark / Light Theme Toggle<br>
+✅ Responsive UI Design<br>
+✅ Local Storage Integration<br>
+✅ Modern Glassmorphism Design<br>
 ✅ Smooth Animations & Hover Effects
 
 
